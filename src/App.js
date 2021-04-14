@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Player from "./components/Player";
 
 function App() {
   const [songs, setSongs] = useState([
@@ -31,21 +32,13 @@ function App() {
       src: "./music/William Bolton - Angel Boy.mp3",
     },
   ]);
+
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Player song={songs[currentSongIndex]} nextSong={songs[nextSongIndex]} />
     </div>
   );
 }
