@@ -1,13 +1,92 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Arial", sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #ddd;
+}
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.player {
+  background-color: #313131;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8),
+    inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+}
+.player > h4 {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+.player > p {
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+}
+.player--details .details-img {
+  position: relative;
+  width: fit-content;
+  margin: 50px auto;
+}
+.player--details .details-img img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+  border: 3px solid #629bd9;
+}
+.player--details .details-title {
+  color: #eee;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.player--details .details-artist {
+  color: #aaa;
+  font-size: 20px;
+  text-align: center;
+}
+.player--controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.player--controls .play-btn {
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: #3d94f6;
+  background-image: -webkit-linear-gradient(top, #3d94f6, #1e62d0);
+  background-image: -moz-linear-gradient(top, #3d94f6, #1e62d0);
+  background-image: -ms-linear-gradient(top, #3d94f6, #1e62d0);
+  background-image: -o-linear-gradient(top, #3d94f6, #1e62d0);
+  background-image: -webkit-gradient(to bottom, #3d94f6, #1e62d0);
+  -webkit-box-shadow: 1px 1px 20px 0 #0059a0;
+  -moz-box-shadow: 1px 1px 20px 0 #0059a0;
+  box-shadow: 1px 1px 20px 0 #0059a0;
+  color: #fff;
+  font-size: 21px;
+  cursor: pointer;
+}
+.player--controls .skip-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
 }
